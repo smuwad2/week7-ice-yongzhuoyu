@@ -11,8 +11,13 @@ import { addAbortListener } from 'events';
             
         },
         methods:{
+            //remove the selected item in items array
             deleteItem(index){
-                this.item.remove();
+                this.items.splice(index,1);
+            },
+            addItem(){
+                //add new item into the items array 
+                this.items.push(this.newItem);
             }
         }
     }
@@ -32,5 +37,5 @@ import { addAbortListener } from 'events';
     </ul>
 
     <input type="text" v-model="newItem">
-    <button @click="addItem"></button>
+    <button @click="addItem">Add!</button>
 </template>
