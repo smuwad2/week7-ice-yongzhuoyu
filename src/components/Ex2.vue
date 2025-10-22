@@ -1,5 +1,4 @@
 <script>
-import { addAbortListener } from 'events';
 
     export default { 
         // Add code in appropriate places
